@@ -46,14 +46,17 @@ if (empty($temp)) {
 		<div id="indent">
 			<h2><center>Confirmation</center></h2>
 			<br><hr style="width: 80%;"><br>
-			<p>Room Type: Standard </p>
+			<p>Cottage Type: Chalet 2 </p>
 			<p>Check in: <?php echo $checkin; ?></p>
 			<p>Check out: <?php echo $checkout; ?></p>
 			<p>Name: <?php echo $firstname." ".$lastname; ?></p>
 			<p>Contact: <?php echo $contact; ?></p>
 			<p>Room Number: <?php echo $temp; ?></p>
 			<p>Price: Php2,000.00</p>
-			<br><br>Php2,000.00</p>
+			<?php $diff = abs(strtotime($checkout)-strtotime($checkin));
+			$days=($diff/(60*60*24))*2000;
+			?>
+			<p>Grand Total <?php echo $days; ?></p>
 			<br><br>
 		</div>
 	</div>
