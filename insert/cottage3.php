@@ -52,9 +52,9 @@ if (empty($temp)) {
 			<p>Name: <?php echo $firstname." ".$lastname; ?></p>
 			<p>Contact: <?php echo $contact; ?></p>
 			<p>Room Number: <?php echo $temp; ?></p>
-			<p>Price: Php2,000.00</p>
+			<p>Price: Php1500</p>
 			<?php $diff = abs(strtotime($checkout)-strtotime($checkin));
-			$days=($diff/(60*60*24))*2000;
+			$days=($diff/(60*60*24))*1500;
 			?>
 			<p>Grand Total <?php echo $days; ?></p>
 			<br><br>
